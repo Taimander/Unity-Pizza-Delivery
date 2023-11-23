@@ -9,7 +9,7 @@ public class ScoreTrigger : MonoBehaviour
     
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player") {
-            GameObject.Find("ScoreManager").GetComponent<Score>().AddScore(1);
+            GameObject.Find("ScoreManager").GetComponent<Score>().AddScore();
             Object.Destroy(prefab);
         }
     }
