@@ -10,6 +10,8 @@ public class Score : MonoBehaviour
     public TMP_Text scoreText;
     public TMP_Text returnText;
 
+    public AudioSource ding;
+
     public float timeLeft = 60;
 
     void Start()
@@ -52,6 +54,7 @@ public class Score : MonoBehaviour
         if(!GameObject.Find("Objectives").GetComponent<ObjectivesManager>().IsHomeNow()) {
             PlayerGlobals.GetInstance().score += (int)Math.Floor(timeLeft);
         }
+        ding.Play();
         timeLeft = 60;
         UpdateText();
     }

@@ -35,6 +35,10 @@ public class ObjectivesManager : MonoBehaviour
         }
     }
 
+    public GameObject GetCurrent() {
+        return current;
+    }
+
     public bool IsHomeNow() {
         return isHome;
     }
